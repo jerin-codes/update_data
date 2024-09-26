@@ -27,7 +27,7 @@ def get_country(country):
         return "India"
 
 
-def process_pdf_and_send_to_api_team1(pdf_path, team_name,index_one,index_two):
+def process_pdf_and_send_to_api_team1(pdf_path,index_one,index_two):
     
     
     tables = tabula.read_pdf(pdf_path, pages="all", multiple_tables=True)
@@ -98,5 +98,5 @@ def process_pdf_and_send_to_api_team1(pdf_path, team_name,index_one,index_two):
             print(f"Error sending data for jersey number {player['jersey_number']}: {e}")
 
 # Example usage
-process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",team_name="Kannur Warriors FC",index_one=2,index_two=4)#Scraping the first team players details from the pdf
-process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",team_name="Kannur Warriors FC",index_one=3,index_two=5)#Scraping the secong team players details from the pdf
+process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",index_one=2,index_two=4)#Scraping the first team players details from the pdf
+process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",index_one=3,index_two=5)#Scraping the secong team players details from the pdf
