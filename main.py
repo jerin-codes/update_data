@@ -7,11 +7,11 @@ import re
 def get_teamID(team):
     if team == "Kannur Warriors FC" or team == "Kannur Warriors" or team== "Kannur":
         return 27
-    elif team == " KOCHI FORCA FC" or team=="KOCHI FORCA" or team=="KOCHI":
+    elif team == "KOCHI FORCA FC" or team=="KOCHI FORCA" or team=="KOCHI":
         return 20
     elif team == "Calicut FC" or team =="Calicut":
         return 22
-    elif team == "THIRUVANANTHAPURAM KOMBANS" or team =="THIRUVANANTHAPURAM":
+    elif team == "THIRUVANANTHAPURAM KOMBANS" or team =="THIRUVANANTHAPURAM" or team=="HIRUVANANTHAPURAM":
         return 24
     elif team == "Malappuram Football Club" or team=="Malappuram Football" or team =="Malappuram":
         return 21
@@ -98,5 +98,5 @@ def process_pdf_and_send_to_api_team1(pdf_path,index_one,index_two):
             print(f"Error sending data for jersey number {player['jersey_number']}: {e}")
 
 # Example usage
-process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",index_one=2,index_two=4)#Scraping the first team players details from the pdf
-process_pdf_and_send_to_api_team1(pdf_path="malappuram vs calicut.pdf",index_one=3,index_two=5)#Scraping the secong team players details from the pdf
+process_pdf_and_send_to_api_team1(pdf_path="thrissur vs kannur.pdf",index_one=2,index_two=4)#Scraping the first team players details from the pdf
+process_pdf_and_send_to_api_team1(pdf_path="thrissur vs kannur.pdf",index_one=3,index_two=5)#Scraping the secong team players details from the pdf
